@@ -41,14 +41,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Response response) throws IOException {
                 try {
-
+                    Log.v(TAG, response.body().string());
                     if (response.isSuccessful()) {
-                        Log.v(TAG, response.body().string());
+
+                    }
+                    else {
+                        alertUserAboutError();
                     }
                 } catch (IOException e) {
                     Log.e(TAG, "Exception caught: ", e);
                 }
             }
         });
+    }
+
+    private void alertUserAboutError() {
+        AlertDialogFragment dialog = new AlertDialogFragment();
+        dialog.show(getFragmentManager(), "error_dialog");
     }
 }
