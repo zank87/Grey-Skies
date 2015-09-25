@@ -1,10 +1,12 @@
-package com.johnzank.greyskies;
+package com.johnzank.greyskies.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import com.johnzank.greyskies.R;
 
 /**
  * Created by johnzank on 8/28/15.
